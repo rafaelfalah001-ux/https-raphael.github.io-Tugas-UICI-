@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Website Simple — Nama Kamu</title>
+  <meta name="description" content="Website sederhana — hero, about, dan kontak. Siap dipublish di GitHub Pages."/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0f172a; --bg2:#0b1020; --accent:#ff6b6b; --muted:#9aa4b2;
+      --maxw:1000px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,107,107,0.06), transparent),
+                  linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+    }
+    .wrap{width:100%;max-width:var(--maxw);}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .logo{display:flex;gap:10px;align-items:center}
+    .logo .dot{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff9a9a);display:flex;align-items:center;justify-content:center;font-weight:800;color:#111}
+    nav{display:flex;gap:12px;align-items:center}
+    a.btn{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:10px;color:inherit;text-decoration:none;font-weight:600}
+    a.cta{background:var(--accent);color:#111;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:18px;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
+    .hero h1{margin:0;font-size:28px;line-height:1.05}
+    .hero p{color:var(--muted);margin:12px 0 18px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .video-placeholder{height:200px;border-radius:12px;background:
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360"><rect width="100%" height="100%" fill="%230b1020"/><text x="50%" y="45%" fill="%238b97a7" font-family="Inter, Arial" font-size="20" text-anchor="middle">VIDEO / IMG</text><text x="50%" y="60%" fill="%236d7780" font-family="Inter, Arial" font-size="12" text-anchor="middle">gantikan ini dengan link YouTube atau file</text></svg>') center/cover no-repeat; display:flex;align-items:flex-end;padding:12px;color:#fff;font-weight:700}
+
+    /* Sections */
+    section{margin-top:20px;display:grid;grid-gap:12px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .muted{color:var(--muted);font-size:14px}
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr; padding:18px}
+      .video-placeholder{height:160px}
+      .grid-3{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:11px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="dot">W</div>
+        <div>
+          <div style="font-weight:700">WebsiteSimple</div>
+          <div class="muted" style="font-size:12px">Siap publish · Gratis · GitHub Pages</div>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="cta" href="#open">Buka</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1 id="open">Halo — Ini halaman demo kamu</h1>
+          <p class="muted">Template ringan, responsif, dan mudah disesuaikan. Ganti teks, ganti gambar/video — lalu publish ke GitHub Pages.</p>
+          <div class="actions">
+            <a class="cta" href="#contact">Edit Sekarang</a>
+            <a class="btn" href="https://github.com" target="_blank" rel="noopener">Lihat di GitHub</a>
+          </div>
+
+          <div style="margin-top:18px" class="card">
+            <strong>Petunjuk cepat:</strong>
+            <div class="muted" style="margin-top:6px">Simpan file ini sebagai <code>index.html</code> di root repo GitHub kamu. Aktifkan GitHub Pages di Settings → Pages → branch main (root).</div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <div class="video-placeholder">PLAY</div>
+            <div style="margin-top:12px">
+              <div style="font-weight:700">Demo cepat</div>
+              <div class="muted" style="margin-top:6px">Ganti placeholder dengan iframe YouTube atau file video kamu.</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:center">
+          <div>
+            <h3 style="margin:0">Tentang</h3>
+            <div class="muted">Template ini simpel — cocok untuk tugas, portofolio, atau landing page kecil.</div>
+          </div>
+          <div style="text-align:right" class="muted">Versi demo • Editable</div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <strong>Fast</strong>
+            <div class="muted">Tidak perlu backend, HTML statis saja.</div>
+          </div>
+          <div class="card">
+            <strong>Responsive</strong>
+            <div class="muted">Tampilan rapi di HP & desktop.</div>
+          </div>
+          <div class="card">
+            <strong>Gratis</strong>
+            <div class="muted">Hosting gratis pakai GitHub Pages / Netlify.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card">
+          <h4 style="margin:0">Kontak</h4>
+          <div style="margin-top:8px" class="muted">Ganti ini dengan email / link sosial kamu.</div>
+          <div style="margin-top:12px">
+            <a href="mailto:hello@example.com" class="btn">Email</a>
+            <a href="#" class="btn">Twitter</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> WebsiteSimple — dibuat cepat
+    </footer>
+  </div>
+
+  <script>
+    // small script: update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
